@@ -2,3 +2,14 @@
 
 /*  normalize  */
 @import url('../vendor/normalize.css');
+
+/*  fonts  */
+@import url('../vendor/fonts/fonts.css');
+
+
+/*  root  */
+@import url('../blocks/root/root.css');
+
+
+/*  main  */
+@import url('../blocks/main/main.css');
