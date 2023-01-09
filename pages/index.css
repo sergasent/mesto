@@ -30,3 +30,9 @@
 @import url('../blocks/profile/__info/profile__info.css');
 @import url('../blocks/profile/__name/profile__name.css');
 @import url('../blocks/profile/__description/profile__description.css');
+
+
+/*  add-card-section  */
+@import url('../blocks/add-card-section/add-card-section.css');
+@import url('../blocks/add-card-section/__button/add-card-section__button.css');
+
