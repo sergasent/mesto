@@ -2,5 +2,6 @@
   flex-grow: 1;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  grid-template-rows: minmax(min-content, max-content);
 }
