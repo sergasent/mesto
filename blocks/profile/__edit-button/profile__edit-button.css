@@ -1,3 +1,13 @@
 .profile__edit-button {
-  display: inline-block;
+  margin-top: 15px;
+  border: 1px solid #fff;
+
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.profile__edit-button:hover {
+  cursor: pointer;
+
+  opacity: .6;
 }

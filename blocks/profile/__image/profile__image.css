@@ -1,6 +1,6 @@
 .profile__image {
   width: 120px;
-  margin: 0 30px 51px 0;
+  margin-right: 30px;
 
   border-radius: 50%;
   object-fit: cover;
