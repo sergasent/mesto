@@ -5,4 +5,8 @@
   display: grid;
   grid-template-columns: auto auto;
   align-items: start;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
