@@ -8,3 +8,9 @@
 
   box-sizing: border-box;
 }
+
+.add-card-section__button:hover {
+  cursor: pointer;
+
+  opacity: .6;
+}
