@@ -4,10 +4,18 @@
 
   background-color: #000;
   box-sizing: border-box;
+
+  transition: opacity .2s ease;
 }
 
 .profile__edit-button:hover {
   cursor: pointer;
 
   opacity: .6;
+}
+
+.profile__edit-button:active {
+  opacity: 1;
+
+  transition: opacity ease;
 }

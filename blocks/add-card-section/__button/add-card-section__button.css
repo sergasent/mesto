@@ -7,10 +7,18 @@
   background-color: #000;
 
   box-sizing: border-box;
+
+  transition: opacity .2s ease;
 }
 
 .add-card-section__button:hover {
   cursor: pointer;
 
   opacity: .6;
+}
+
+.add-card-section__button:active {
+  opacity: 1;
+
+  transition: opacity ease;
 }
