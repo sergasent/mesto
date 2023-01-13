@@ -61,10 +61,12 @@
 
 /*  popup-wrapper  */
 @import url('../blocks/popup-wrapper/popup-wrapper.css');
+@import url('../blocks/popup-wrapper/_visible/popup-wrapper_visible.css');
 
 
 /*  edit-profile-popup  */
 @import url('../blocks/edit-profile-popup/edit-profile-popup.css');
+@import url('../blocks/edit-profile-popup/_visible/edit-profile-popup_visible.css');
 @import url('../blocks/edit-profile-popup/__title/edit-profile-popup__title.css');
 @import url('../blocks/edit-profile-popup/__input-group/edit-profile-popup__input-group.css');
 @import url('../blocks/edit-profile-popup/__input/edit-profile-popup__input.css');
