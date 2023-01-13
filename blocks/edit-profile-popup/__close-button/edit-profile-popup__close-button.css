@@ -7,7 +7,7 @@
   right: -40px;
   top: -40px;
 
-  background: url('../../../images/popup/Close\ Icon.svg');
+  background: url('../../../images/popup/Close\ Icon.svg') center / contain;
 
   transition: opacity .2s ease;
 }
@@ -20,4 +20,15 @@
 
 .edit-profile-popup__close-button:active {
   opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .edit-profile-popup__close-button {
+    width: 20px;
+    height: 20px;
+
+    right: 0;
+    top: -40px;
+  }
 }

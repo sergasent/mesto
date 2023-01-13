@@ -23,3 +23,13 @@
 .edit-profile-popup__save-button:active {
   background: rgba(0, 0, 0, .5);
 }
+
+
+@media screen and (max-width: 768px) {
+  .edit-profile-popup__save-button {
+    min-height: 46px;
+
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
