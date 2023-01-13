@@ -1,0 +1,23 @@
+.edit-profile-popup__close-button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+
+  position: absolute;
+  right: -40px;
+  top: -40px;
+
+  background: url('../../../images/popup/Close\ Icon.svg');
+
+  transition: opacity .2s ease;
+}
+
+.edit-profile-popup__close-button:hover {
+  cursor: pointer;
+
+  opacity: .6;
+}
+
+.edit-profile-popup__close-button:active {
+  opacity: 1;
+}

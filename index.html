@@ -97,6 +97,20 @@
     </footer>
   </div>
 
+  <div class="popup-wrapper">
+    <article class="edit-profile-popup">
+      <h2 class="edit-profile-popup__title">Редактировать профиль</h2>
+      <form action="/" method="post">
+        <fieldset class="edit-profile-popup__input-group">
+          <input class="edit-profile-popup__username edit-profile-popup__input" type="text" name="name" id="name" placeholder="Ваше имя">
+          <input class="edit-profile-popup__description edit-profile-popup__input" type="text" name="desription" id="desription" placeholder="О себе">
+        </fieldset>
+        <input class="edit-profile-popup__save-button" type="button" value="Сохранить">
+      </form>
+      <button class="edit-profile-popup__close-button" type="button"></button>
+    </article>
+  </div>
+
   <script src="./scripts/script.js"></script>
 </body>
 </html>
