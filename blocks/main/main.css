@@ -5,3 +5,16 @@
   grid-template-columns: auto auto;
   grid-template-rows: minmax(min-content, max-content);
 }
+
+@media screen and (max-width: 768px) {
+  .main {
+    grid-template-columns: minmax(min-content, max-content) 1fr;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+}

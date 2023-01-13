@@ -7,6 +7,10 @@
 @import url('../vendor/fonts/fonts.css');
 
 
+/* logo  */
+@import url('../blocks/logo/logo.css');
+
+
 /*  root  */
 @import url('../blocks/root/root.css');
 

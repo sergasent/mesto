@@ -10,3 +10,15 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+
+@media screen and (max-width: 645px) {
+  .profile__info {
+    padding-top: 26px;
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns: 18px auto auto;
+    column-gap: 10px;
+  }
+}

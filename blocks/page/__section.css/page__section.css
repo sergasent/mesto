@@ -7,3 +7,10 @@
 
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 645px) {
+  .page__section {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}

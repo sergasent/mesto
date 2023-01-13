@@ -3,3 +3,10 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+
+@media screen and (max-width: 645px) {
+  .add-card-section {
+    justify-content: stretch;
+  }
+}
