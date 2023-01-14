@@ -1,50 +1,40 @@
-let popupWrapper = document.querySelector('.popup');
-
-
-/*  Close edit profile form function  */
-
-function closeProfilePopup() {
-  popupWrapper.setAttribute('aria-hidden', 'true');
-  popupWrapper.classList.remove('popup_visible');
-}
-
-
-/*  Open edit profile form  */
-
 let editProfileBtn = document.querySelector('.profile__edit-button');
-
 let profileName = document.querySelector('.profile__name');
 let profileDescription = document.querySelector('.profile__description');
-let profileNameInput = document.querySelector('.profile-form__input_type_username');
-let profileDescriptionInput = document.querySelector('.profile-form__input_type_description');
-
-editProfileBtn.addEventListener('click', function () {
-  popupWrapper.setAttribute('aria-hidden', 'undefined');
-  popupWrapper.classList.add('popup_visible');
-
-  profileNameInput.value = profileName.textContent;
-  profileDescriptionInput.value = profileDescription.textContent;
-});
 
 
-/*  Save changes  */
+let popup = document.querySelector('.popup');
+let popupProfileForm = document.querySelector('.profile-form');
+let popupProfileName = document.querySelector('.profile-form__input_type_username');
+let popupProfileDescription = document.querySelector('.profile-form__input_type_description');
+let popupCloseBtn = document.querySelector('.popup__close-button');
 
-let saveProfileBtn = document.querySelector('.profile-form__save-button');
+
+function openProfilePopup() {
+  popup.setAttribute('aria-hidden', 'undefined');
+  popup.classList.add('popup_opened');
+
+  popupProfileName.value = profileName.textContent;
+  popupProfileDescription.value = profileDescription.textContent;
+}
+
+function closePopup() {
+  popup.setAttribute('aria-hidden', 'true');
+  popup.classList.remove('popup_opened');
+}
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
 
-  profileName.textContent = profileNameInput.value;
-  profileDescription.textContent = profileDescriptionInput.value;
+  profileName.textContent = popupProfileName.value;
+  profileDescription.textContent = popupProfileDescription.value;
 
-  closeProfilePopup();
+  closePopup();
 }
 
-saveProfileBtn.addEventListener('click', handleFormSubmit);
 
+editProfileBtn.addEventListener('click', openProfilePopup);
 
-/*  Close edit profile form by click on close-button  */
+popupProfileForm.addEventListener('submit', handleFormSubmit);
 
-let editPopupCloseBtn = document.querySelector('.popup__close-button');
-
-editPopupCloseBtn.addEventListener('click', closeProfilePopup);
+popupCloseBtn.addEventListener('click', closePopup);
