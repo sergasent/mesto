@@ -93,18 +93,18 @@
     </footer>
   </div>
 
-  <div class="popup-wrapper" aria-hidden="true" aria-modal="true" role="dialog">
-    <article class="edit-profile-popup">
-      <h2 class="edit-profile-popup__title">Редактировать профиль</h2>
-      <form>
-        <fieldset class="edit-profile-popup__input-group">
-          <input class="edit-profile-popup__username edit-profile-popup__input" type="text" name="name" id="name" placeholder="Ваше имя">
-          <input class="edit-profile-popup__description edit-profile-popup__input" type="text" name="desription" id="desription" placeholder="О себе">
+  <div class="popup" aria-hidden="true" aria-modal="true" role="dialog">
+    <div class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="profile-form" name="profile-form" method="post" action="/">
+        <fieldset class="profile-form__input-group">
+          <input class="profile-form__input profile-form__input_type_username" type="text" name="name" id="name" placeholder="Ваше имя">
+          <input class="profile-form__input profile-form__input_type_description" type="text" name="description" id="description" placeholder="О себе">
         </fieldset>
-        <input class="edit-profile-popup__save-button" type="submit" value="Сохранить">
+        <input class="profile-form__save-button" type="submit" value="Сохранить">
       </form>
-      <button class="edit-profile-popup__close-button" type="button"></button>
-    </article>
+      <button class="popup__close-button" type="button"></button>
+    </div>
   </div>
 
   <script src="./scripts/index.js"></script>

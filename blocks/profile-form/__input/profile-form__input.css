@@ -1,11 +1,13 @@
-.edit-profile-popup__input {
+.profile-form__input {
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
-  padding-bottom: 13px;
+  padding: 1px 0 8px;
   outline: none;
 
   font-style: inherit;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.21;
+
+  box-sizing: border-box;
 }
