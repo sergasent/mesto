@@ -1,8 +1,9 @@
 .profile {
-  padding: 40px 16px 40px 0;
+  padding: 40px 0;
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
 
   color: #fff;
 }
@@ -13,5 +14,6 @@
     padding: 42px 0 0;
     flex-direction: column;
     align-items: center;
+    gap: 32px;
   }
 }

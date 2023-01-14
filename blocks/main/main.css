@@ -1,20 +1,13 @@
 .main {
   flex-grow: 1;
 
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: minmax(min-content, max-content);
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 768px) {
-  .main {
-    grid-template-columns: minmax(min-content, max-content) 1fr;
-  }
-}
 
 @media screen and (max-width: 645px) {
   .main {
-    grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 36px;
   }
 }

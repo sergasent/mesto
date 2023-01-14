@@ -16,16 +16,15 @@
 
     <main class="main page__section">
       <section class="profile" aria-label="Информация о профиле пользователя">
-        <img src="./images/profile/kusto.jpg" alt="Аватар пользователя" class="profile__image">
-        <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button class="profile__edit-button" type="button"></button>
-          <p class="profile__description">Исследователь океана</p>
+        <div class="profile__container">
+          <img src="./images/profile/kusto.jpg" alt="Аватар пользователя" class="profile__image">
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
+            <p class="profile__description">Исследователь океана</p>
+          </div>
         </div>
-      </section>
-
-      <section class="add-card-section" aria-label="Секция добавления изображение">
-        <button class="add-card-section__button" type="button"></button>
+        <button class="profile__add-button" type="button"></button>
       </section>
 
       <section class="cards" aria-label="Список изображений">
@@ -85,8 +84,8 @@
             </article>
           </li>
         </ul>
-      </section>
-    </main>
+      </section>  <!--  .cards  -->
+    </main>  <!-- .main  -->
 
     <footer class="footer page__section">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>

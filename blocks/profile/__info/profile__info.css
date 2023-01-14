@@ -4,6 +4,7 @@
 
   display: grid;
   grid-template-columns: auto auto;
+  grid-template-rows: minmax(min-content, max-content);
   align-items: start;
 
   text-overflow: ellipsis;
