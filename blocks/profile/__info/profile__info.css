@@ -1,6 +1,6 @@
 .profile__info {
-  max-width: 336px;
-  padding-top: 22px;
+  max-width: 366px;
+  padding-right: 30px;
 
   display: grid;
   grid-template-columns: auto auto;
