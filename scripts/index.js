@@ -11,7 +11,6 @@ let popupCloseBtn = document.querySelector('.popup__close-button');
 
 
 function openProfilePopup() {
-  popup.setAttribute('aria-hidden', 'undefined');
   popup.classList.add('popup_opened');
 
   popupProfileName.value = profileName.textContent;
@@ -19,7 +18,6 @@ function openProfilePopup() {
 }
 
 function closePopup() {
-  popup.setAttribute('aria-hidden', 'true');
   popup.classList.remove('popup_opened');
 }
 
