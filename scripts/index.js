@@ -49,6 +49,14 @@ const popupNewCardName = document.querySelector('.new-card-form__input_type_name
 const popupNewCardLink = document.querySelector('.new-card-form__input_type_link');
 
 
+function toggleCardLike(evt) {
+  evt.target.classList.toggle('card__like-button_active');
+}
+
+function deleteCard(evt) {
+  evt.target.closest('.cards__list-item').remove();
+}
+
 function createCard(source) {
   const card = cardTemplate.cloneNode(true);
 
@@ -57,6 +65,8 @@ function createCard(source) {
   cardImage.alt = source.name;
 
   card.querySelector('.card__title').textContent = source.name;
+  card.querySelector('.card__delete-button').addEventListener('click', deleteCard);
+  card.querySelector('.card__like-button').addEventListener('click', toggleCardLike);
 
   //  TODO
   //  Навесить события

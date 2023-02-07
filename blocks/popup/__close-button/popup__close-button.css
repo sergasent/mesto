@@ -8,8 +8,6 @@
   top: -40px;
 
   background: url('../../../images/popup/Close\ Icon.svg') center / contain;
-
-  transition: opacity .2s ease;
 }
 
 .popup__close-button:hover {

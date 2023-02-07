@@ -20,19 +20,19 @@
           <img src="./images/profile/kusto.jpg" alt="Аватар пользователя" class="profile__image">
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button class="profile__edit-button page__link" type="button"></button>
             <p class="profile__description">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__add-button page__link" type="button"></button>
       </section>
 
       <section class="cards" aria-label="Список изображений">
         <ul class="cards__list">
 
         </ul>
-      </section>  <!--  .cards  -->
-    </main>  <!-- .main  -->
+      </section>
+    </main>
 
     <footer class="footer page__section">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
@@ -51,7 +51,7 @@
         <input class="popup-form__save-button profile-form__save-button" type="submit" value="Сохранить">
       </form>
 
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button page__link" type="button"></button>
     </div>
   </div>
 
@@ -67,7 +67,7 @@
         <input class="popup-form__save-button new-card-form__save-button" type="submit" value="Создать">
       </form>
 
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button page__link" type="button"></button>
     </div>
   </div>
 
@@ -76,13 +76,14 @@
 
       <!--  TODO: попап открытия карточки  -->>
 
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button page__link" type="button"></button>
     </div>
   </div>
 
   <template class="cards__template">
     <li class="cards__list-item">
       <article class="card">
+        <button class="card__delete-button page__link" type="button"></button>
         <img src="" alt="" class="card__image">
         <div class="card__description">
           <h2 class="card__title"></h2>

@@ -7,6 +7,8 @@
   cursor: pointer;
 
   background: url('../../../images/cards/like.svg') no-repeat center / contain;
+
+  transition: background .2s ease, opacity .2s ease;
 }
 
 .card__like-button:hover {

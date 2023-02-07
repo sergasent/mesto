@@ -9,8 +9,6 @@
   background-origin: content-box;
 
   box-sizing: border-box;
-
-  transition: opacity .2s ease;
 }
 
 .profile__edit-button:hover {
