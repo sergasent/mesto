@@ -1,4 +1,4 @@
-.profile-form__input-group {
+.popup-form__input-group {
   width: 358px;
   border: 0;
   margin: 0;
@@ -13,7 +13,7 @@
 
 
 @media screen and (max-width: 768px) {
-  .profile-form__input-group {
+  .popup-form__input-group {
     width: 238px;
     padding: 0 0 45px;
   }

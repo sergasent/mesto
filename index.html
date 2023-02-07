@@ -39,16 +39,43 @@
     </footer>
   </div>
 
-  <div class="popup">
+  <div class="popup popup_type_profile">
     <div class="popup__container">
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="profile-form" name="profile-form" method="post" action="/">
-        <fieldset class="profile-form__input-group">
-          <input class="profile-form__input profile-form__input_type_username" type="text" name="name" id="name" placeholder="Ваше имя">
-          <input class="profile-form__input profile-form__input_type_description" type="text" name="description" id="description" placeholder="О себе">
+
+      <form class="popup__content popup-form profile-form" name="profile-form" method="post" action="/">
+        <h2 class="popup-form__title">Редактировать профиль</h2>
+        <fieldset class="popup-form__input-group">
+          <input class="popup-form__input profile-form__input_type_username" type="text" name="name" id="name" placeholder="Ваше имя" required>
+          <input class="popup-form__input profile-form__input_type_description" type="text" name="description" id="description" placeholder="О себе" required>
         </fieldset>
-        <input class="profile-form__save-button" type="submit" value="Сохранить">
+        <input class="popup-form__save-button profile-form__save-button" type="submit" value="Сохранить">
       </form>
+
+      <button class="popup__close-button" type="button"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_type_new-card">
+    <div class="popup__container">
+
+      <form class="popup__content popup-form new-card-form" name="new-card-form" method="post" action="/">
+        <h2 class="popup-form__title">Новое место</h2>
+        <fieldset class="popup-form__input-group">
+          <input class="popup-form__input new-card-form__input_type_name" type="text" name="name" id="name" placeholder="Название" required>
+          <input class="popup-form__input new-card-form__input_type_link" type="text" name="description" id="image-link" placeholder="Ссылка на картинку" required>
+        </fieldset>
+        <input class="popup-form__save-button new-card-form__save-button" type="submit" value="Создать">
+      </form>
+
+      <button class="popup__close-button" type="button"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_type_show-card">
+    <div class="popup__container popup__container_type_show-card">
+
+      <!--  TODO: попап открытия карточки  -->>
+
       <button class="popup__close-button" type="button"></button>
     </div>
   </div>

@@ -25,69 +25,110 @@ const initialCards = [
   },
 ];
 
+
 const cardsList = document.querySelector('.cards__list');
 const cardTemplate = document.querySelector('.cards__template').content;
 const cardAddButton = document.querySelector('.profile__add-button');
 
 
-const editProfileBtn = document.querySelector('.profile__edit-button');
+const editProfileButton = document.querySelector('.profile__edit-button');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 
 
-const popup = document.querySelector('.popup');
+const popupCloseButtonsList = document.querySelectorAll('.popup__close-button');
+
+const popupTypeProfile = document.querySelector('.popup_type_profile');
 const popupProfileForm = document.querySelector('.profile-form');
 const popupProfileName = document.querySelector('.profile-form__input_type_username');
 const popupProfileDescription = document.querySelector('.profile-form__input_type_description');
-const popupCloseBtn = document.querySelector('.popup__close-button');
+
+const popupTypeNewCard = document.querySelector('.popup_type_new-card');
+const popupNewCardForm = document.querySelector('.new-card-form');
+const popupNewCardName = document.querySelector('.new-card-form__input_type_name');
+const popupNewCardLink = document.querySelector('.new-card-form__input_type_link');
 
 
-function addCards(...cards) {
-  cards.forEach(item => {
-    const card = cardTemplate.cloneNode(true);
+function createCard(source) {
+  const card = cardTemplate.cloneNode(true);
 
-    const cardImage = card.querySelector('.card__image');
-    cardImage.src = item.link;
-    cardImage.alt = item.name;
+  const cardImage = card.querySelector('.card__image');
+  cardImage.src = source.link;
+  cardImage.alt = source.name;
 
-    card.querySelector('.card__title').textContent = item.name;
+  card.querySelector('.card__title').textContent = source.name;
 
-    cardsList.prepend(card);
-  });
+  //  TODO
+  //  Навесить события
+
+  return card;
+}
+
+function drawCard(card) {
+  cardsList.prepend( createCard(card) );
 }
 
 function fillInitialCards() {
-  addCards(...initialCards);
+  initialCards.forEach(item => {
+    drawCard(item);
+  });
+}
+
+
+function toggleShowPopup(popup) {
+  popup.classList.toggle('popup_opened');
 }
 
 
 function openProfilePopup() {
-  popup.classList.add('popup_opened');
-
   popupProfileName.value = profileName.textContent;
   popupProfileDescription.value = profileDescription.textContent;
+
+  toggleShowPopup(popupTypeProfile);
 }
 
-function closePopup() {
-  popup.classList.remove('popup_opened');
-}
-
-function handleFormSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
   profileName.textContent = popupProfileName.value;
   profileDescription.textContent = popupProfileDescription.value;
 
-  closePopup();
+  toggleShowPopup(popupTypeProfile);
 }
+
+
+function openNewCardPopup() {
+  popupNewCardName.value = '';
+  popupNewCardLink.value = '';
+
+  toggleShowPopup(popupTypeNewCard);
+}
+
+function handleNewCardFormSubmit(evt) {
+  evt.preventDefault();
+
+  drawCard({
+    name: popupNewCardName.value,
+    link: popupNewCardLink.value
+  });
+
+  toggleShowPopup(popupTypeNewCard);
+}
+
 
 document.addEventListener('DOMContentLoaded', fillInitialCards);
 
-//cardAddButton.addEventListener('click', fillInitialCards);
+popupCloseButtonsList.forEach(closeButton => {
+  const handleClosePopup = () => {
+    return toggleShowPopup( closeButton.closest('.popup') );
+  };
 
+  closeButton.addEventListener('click', handleClosePopup);
+});
 
-editProfileBtn.addEventListener('click', openProfilePopup);
+cardAddButton.addEventListener('click', openNewCardPopup);
+popupNewCardForm.addEventListener('submit', handleNewCardFormSubmit);
 
-popupProfileForm.addEventListener('submit', handleFormSubmit);
+editProfileButton.addEventListener('click', openProfilePopup);
+popupProfileForm.addEventListener('submit', handleProfileFormSubmit);
 
-popupCloseBtn.addEventListener('click', closePopup);

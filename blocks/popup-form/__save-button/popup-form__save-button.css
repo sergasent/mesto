@@ -1,4 +1,4 @@
-.profile-form__save-button {
+.popup-form__save-button {
   width: 100%;
   min-height: 50px;
   border: 0;
@@ -14,19 +14,19 @@
   transition: background 0.2s ease;
 }
 
-.profile-form__save-button:hover {
+.popup-form__save-button:hover {
   cursor: pointer;
 
   background: rgba(0, 0, 0, .8);
 }
 
-.profile-form__save-button:active {
+.popup-form__save-button:active {
   background: rgba(0, 0, 0, .5);
 }
 
 
 @media screen and (max-width: 768px) {
-  .profile-form__save-button {
+  .popup-form__save-button {
     min-height: 46px;
 
     font-size: 14px;
