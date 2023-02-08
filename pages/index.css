@@ -13,12 +13,12 @@
 
 /*  root  */
 @import url('../blocks/root/root.css');
+@import url('../blocks/root/__link/root__link.css');
 
 
 /*  page  */
 @import url('../blocks/page/page.css');
 @import url('../blocks/page/__section.css/page__section.css');
-@import url('../blocks/page/__link/page__link.css');
 
 
 /*  header  */

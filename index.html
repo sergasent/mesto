@@ -20,11 +20,11 @@
           <img src="./images/profile/kusto.jpg" alt="Аватар пользователя" class="profile__image">
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button page__link" type="button"></button>
+            <button class="profile__edit-button root__link" type="button"></button>
             <p class="profile__description">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button page__link" type="button"></button>
+        <button class="profile__add-button root__link" type="button"></button>
       </section>
 
       <section class="cards" aria-label="Список изображений">
@@ -45,13 +45,13 @@
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup-form profile-form" name="profile-form" method="post" action="/">
         <fieldset class="popup-form__input-group">
-          <input class="popup-form__input profile-form__input_type_username" type="text" name="name" id="name" placeholder="Ваше имя" required>
-          <input class="popup-form__input profile-form__input_type_description" type="text" name="description" id="description" placeholder="О себе" required>
+          <input class="popup-form__input popup-form__input_type_username" type="text" name="profile-name" id="profile-name" placeholder="Ваше имя" required>
+          <input class="popup-form__input popup-form__input_type_user-description" type="text" name="profile-description" id="profile-description" placeholder="О себе" required>
         </fieldset>
         <input class="popup-form__save-button profile-form__save-button" type="submit" value="Сохранить">
       </form>
 
-      <button class="popup__close-button page__link" type="button"></button>
+      <button class="popup__close-button root__link" type="button"></button>
     </div>
   </div>
 
@@ -61,13 +61,13 @@
       <h2 class="popup__title">Новое место</h2>
       <form class="popup-form new-card-form" name="new-card-form" method="post" action="/">
         <fieldset class="popup-form__input-group">
-          <input class="popup-form__input new-card-form__input_type_name" type="text" name="name" id="name" placeholder="Название" required>
-          <input class="popup-form__input new-card-form__input_type_link" type="text" name="description" id="image-link" placeholder="Ссылка на картинку" required>
+          <input class="popup-form__input popup-form__input_type_card-name" type="text" name="card-name" id="card-name" placeholder="Название" required>
+          <input class="popup-form__input popup-form__input_type_card-link" type="text" name="image-link" id="image-link" placeholder="Ссылка на картинку" required>
         </fieldset>
         <input class="popup-form__save-button new-card-form__save-button" type="submit" value="Создать">
       </form>
 
-      <button class="popup__close-button page__link" type="button"></button>
+      <button class="popup__close-button root__link" type="button"></button>
     </div>
   </div>
 
@@ -75,20 +75,20 @@
     <div class="popup__container popup__container_type_show-card">
 
       <figure class="popup__image-container">
-        <img class="popup__image" src="" alt="">
+        <img class="popup__image" src="#" alt="#">
         <figcaption class="popup__image-caption"></figcaption>
       </figure>
 
-      <button class="popup__close-button page__link" type="button"></button>
+      <button class="popup__close-button root__link" type="button"></button>
     </div>
   </div>
 
-  <template class="cards__template">
+  <template class="cards-template">
     <li class="cards__list-item">
       <article class="card">
-        <button class="card__delete-button page__link" type="button"></button>
+        <button class="card__delete-button root__link" type="button"></button>
         <a href="#" class="card__link">
-          <img src="" alt="" class="card__image">
+          <img src="#" alt="#" class="card__image">
         </a>
         <div class="card__description">
           <h2 class="card__title"></h2>

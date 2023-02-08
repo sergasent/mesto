@@ -27,7 +27,7 @@ const initialCards = [
 
 
 const cardsList = document.querySelector('.cards__list');
-const cardTemplate = document.querySelector('.cards__template').content;
+const cardTemplate = document.querySelector('.cards-template').content;
 const cardAddButton = document.querySelector('.profile__add-button');
 
 
@@ -40,13 +40,13 @@ const popupCloseButtonsList = document.querySelectorAll('.popup__close-button');
 
 const popupTypeProfile = document.querySelector('.popup_type_profile');
 const popupProfileForm = document.querySelector('.profile-form');
-const popupProfileName = document.querySelector('.profile-form__input_type_username');
-const popupProfileDescription = document.querySelector('.profile-form__input_type_description');
+const popupProfileName = document.querySelector('.popup-form__input_type_username');
+const popupProfileDescription = document.querySelector('.popup-form__input_type_user-description');
 
 const popupTypeNewCard = document.querySelector('.popup_type_new-card');
 const popupNewCardForm = document.querySelector('.new-card-form');
-const popupNewCardName = document.querySelector('.new-card-form__input_type_name');
-const popupNewCardLink = document.querySelector('.new-card-form__input_type_link');
+const popupNewCardName = document.querySelector('.popup-form__input_type_card-name');
+const popupNewCardLink = document.querySelector('.popup-form__input_type_card-link');
 
 const popupTypeShowCard = document.querySelector('.popup_type_show-card');
 const popupImage = document.querySelector('.popup__image');
