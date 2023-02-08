@@ -42,8 +42,8 @@
   <div class="popup popup_type_profile">
     <div class="popup__container">
 
-      <form class="popup__content popup-form profile-form" name="profile-form" method="post" action="/">
-        <h2 class="popup-form__title">Редактировать профиль</h2>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup-form profile-form" name="profile-form" method="post" action="/">
         <fieldset class="popup-form__input-group">
           <input class="popup-form__input profile-form__input_type_username" type="text" name="name" id="name" placeholder="Ваше имя" required>
           <input class="popup-form__input profile-form__input_type_description" type="text" name="description" id="description" placeholder="О себе" required>
@@ -58,8 +58,8 @@
   <div class="popup popup_type_new-card">
     <div class="popup__container">
 
-      <form class="popup__content popup-form new-card-form" name="new-card-form" method="post" action="/">
-        <h2 class="popup-form__title">Новое место</h2>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup-form new-card-form" name="new-card-form" method="post" action="/">
         <fieldset class="popup-form__input-group">
           <input class="popup-form__input new-card-form__input_type_name" type="text" name="name" id="name" placeholder="Название" required>
           <input class="popup-form__input new-card-form__input_type_link" type="text" name="description" id="image-link" placeholder="Ссылка на картинку" required>
@@ -74,7 +74,10 @@
   <div class="popup popup_type_show-card">
     <div class="popup__container popup__container_type_show-card">
 
-      <!--  TODO: попап открытия карточки  -->>
+      <figure class="popup__image-container">
+        <img class="popup__image" src="" alt="">
+        <figcaption class="popup__image-caption"></figcaption>
+      </figure>
 
       <button class="popup__close-button page__link" type="button"></button>
     </div>
@@ -84,7 +87,9 @@
     <li class="cards__list-item">
       <article class="card">
         <button class="card__delete-button page__link" type="button"></button>
-        <img src="" alt="" class="card__image">
+        <a href="#" class="card__link">
+          <img src="" alt="" class="card__image">
+        </a>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>

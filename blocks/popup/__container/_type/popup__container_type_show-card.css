@@ -1,0 +1,11 @@
+.popup__container_type_show-card {
+  max-width: 75vw;
+  max-height: 75vh;
+  padding: 0;
+  border-radius: none;
+
+  display: flex;
+  justify-content: center;
+
+  background: transparent;
+}
