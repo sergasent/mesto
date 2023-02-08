@@ -43,12 +43,12 @@
     <div class="popup__container">
 
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup-form profile-form" name="profile-form" method="post" action="/">
+      <form class="popup-form popup-form_type_profile-form" name="profile-form" method="post" action="/">
         <fieldset class="popup-form__input-group">
           <input class="popup-form__input popup-form__input_type_username" type="text" name="profile-name" id="profile-name" placeholder="Ваше имя" required>
           <input class="popup-form__input popup-form__input_type_user-description" type="text" name="profile-description" id="profile-description" placeholder="О себе" required>
         </fieldset>
-        <input class="popup-form__save-button profile-form__save-button" type="submit" value="Сохранить">
+        <input class="popup-form__save-button" type="submit" value="Сохранить">
       </form>
 
       <button class="popup__close-button root__link" type="button"></button>
@@ -59,12 +59,12 @@
     <div class="popup__container">
 
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup-form new-card-form" name="new-card-form" method="post" action="/">
+      <form class="popup-form popup-form_type_new-card-form" name="new-card-form" method="post" action="/">
         <fieldset class="popup-form__input-group">
           <input class="popup-form__input popup-form__input_type_card-name" type="text" name="card-name" id="card-name" placeholder="Название" required>
           <input class="popup-form__input popup-form__input_type_card-link" type="text" name="image-link" id="image-link" placeholder="Ссылка на картинку" required>
         </fieldset>
-        <input class="popup-form__save-button new-card-form__save-button" type="submit" value="Создать">
+        <input class="popup-form__save-button" type="submit" value="Создать">
       </form>
 
       <button class="popup__close-button root__link" type="button"></button>
@@ -98,6 +98,7 @@
     </li>
   </template>
 
+  <script src="./scripts/initial-cards.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
