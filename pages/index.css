@@ -77,6 +77,10 @@
 /*  popup-form  */
 @import url('../blocks/popup-form/__input-group/popup-form__input-group.css');
 @import url('../blocks/popup-form/__input/popup-form__input.css');
-@import url('../blocks/popup-form/__save-button/popup-form__save-button.css');
+@import url('../blocks/popup-form/__input/_type/popup-form__input_type_error.css');
+@import url('../blocks/popup-form/__input-error/popup-form__input-error.css');
+@import url('../blocks/popup-form/__input-error/_visible/popup-form__input-error_visible.css');
+@import url('../blocks/popup-form/__button/popup-form__button.css');
+@import url('../blocks/popup-form/__button/_disabled/popup-form__button_disabled.css');
 
 

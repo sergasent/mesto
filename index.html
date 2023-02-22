@@ -43,12 +43,14 @@
     <div class="popup__container">
 
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup-form popup-form_type_profile-form" name="profile-form" method="post" action="/">
+      <form class="popup-form popup-form_type_profile-form" name="profile-form" method="post" action="/" novalidate>
         <fieldset class="popup-form__input-group">
-          <input class="popup-form__input popup-form__input_type_username" type="text" name="profile-name" id="profile-name" placeholder="Ваше имя" required>
-          <input class="popup-form__input popup-form__input_type_user-description" type="text" name="profile-description" id="profile-description" placeholder="О себе" required>
+          <input class="popup-form__input popup-form__input_type_username" type="text" name="profile-name" id="profile-name" placeholder="Ваше имя" minlength="2" maxlength="40" required>
+          <span class="profile-name-error popup-form__input-error"></span>
+          <input class="popup-form__input popup-form__input_type_user-description" type="text" name="profile-description" id="profile-description" placeholder="О себе" minlength="2" maxlength="200" required>
+          <span class="profile-description-error popup-form__input-error"></span>
         </fieldset>
-        <input class="popup-form__save-button" type="submit" value="Сохранить">
+        <button class="popup-form__button" type="submit">Сохранить</button>
       </form>
 
       <button class="popup__close-button root__link" type="button"></button>
@@ -59,12 +61,12 @@
     <div class="popup__container">
 
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup-form popup-form_type_new-card-form" name="new-card-form" method="post" action="/">
+      <form class="popup-form popup-form_type_new-card-form" name="new-card-form" method="post" action="/" novalidate>
         <fieldset class="popup-form__input-group">
           <input class="popup-form__input popup-form__input_type_card-name" type="text" name="card-name" id="card-name" placeholder="Название" required>
           <input class="popup-form__input popup-form__input_type_card-link" type="text" name="image-link" id="image-link" placeholder="Ссылка на картинку" required>
         </fieldset>
-        <input class="popup-form__save-button" type="submit" value="Создать">
+        <button class="popup-form__button" type="submit">Создать</button>
       </form>
 
       <button class="popup__close-button root__link" type="button"></button>
