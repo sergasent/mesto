@@ -44,11 +44,17 @@ function deleteCard(evt) {
   evt.target.closest('.cards__list-item').remove();
 }
 
+const handleKeyPress = (evt) => {
+  if (evt.key === 'Escape') closePopup(evt.currentTarget);
+};
+
 function showPopup(popup) {
+  popup.addEventListener('keydown', handleKeyPress);
   popup.classList.add('popup_opened');
 }
 
 function closePopup(popup) {
+  popup.removeEventListener('keydown', handleKeyPress);
   popup.classList.remove('popup_opened');
 }
 
@@ -145,9 +151,6 @@ const handleClosePopup = (evt, popup) => {
   }
 };
 
-const handleKeyPress = (evt, popup) => {
-  if (evt.key === 'Escape') closePopup(popup);
-};
 
 document.addEventListener('DOMContentLoaded', fillInitialCards);
 
@@ -157,9 +160,6 @@ popupsList.forEach(popup => {
   popup.addEventListener('click', (evt) => handleClosePopup(evt, popup) );
 });
 
-popupsList.forEach(popup => {
-  popup.addEventListener('keydown', (evt) => handleKeyPress(evt, popup) );
-});
 
 cardAddButton.addEventListener('click', openNewCardPopup);
 popupNewCardForm.addEventListener('submit', handleNewCardFormSubmit);
