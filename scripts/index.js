@@ -36,11 +36,11 @@ const validationOptions = {
 };
 
 
-function toggleCardLike(evt) {
+const toggleCardLike = (evt) => {
   evt.target.classList.toggle('card__like-button_active');
 }
 
-function deleteCard(evt) {
+const deleteCard = (evt) => {
   evt.target.closest('.cards__list-item').remove();
 }
 
@@ -48,18 +48,18 @@ const handleKeyPress = (evt) => {
   if (evt.key === 'Escape') closePopup(evt.currentTarget);
 };
 
-function showPopup(popup) {
+const showPopup = (popup)  => {
   popup.addEventListener('keydown', handleKeyPress);
   popup.classList.add('popup_opened');
 }
 
-function closePopup(popup) {
+const closePopup = (popup) => {
   popup.removeEventListener('keydown', handleKeyPress);
   popup.classList.remove('popup_opened');
 }
 
 
-function showCardPopup(source) {
+const showCardPopup = (source) => {
    return (evt) => {
     evt.preventDefault();
 
@@ -71,7 +71,7 @@ function showCardPopup(source) {
    };
 }
 
-function createCard(source) {
+const createCard = (source) => {
   const card = cardTemplate.cloneNode(true);
 
   const cardImage = card.querySelector('.card__image');
@@ -86,18 +86,18 @@ function createCard(source) {
   return card;
 }
 
-function drawCard(targetContainer, card) {
+const drawCard = (targetContainer, card) => {
   targetContainer.prepend( createCard(card) );
 }
 
-function fillInitialCards() {
+const fillInitialCards = () => {
   initialCards.forEach(item => {
     drawCard(cardsList, item);
   });
 }
 
 
-function openProfilePopup() {
+const openProfilePopup = () => {
   popupProfileName.value = profileName.textContent;
   popupProfileDescription.value = profileDescription.textContent;
 
@@ -106,7 +106,7 @@ function openProfilePopup() {
   showPopup(popupTypeProfile);
 }
 
-function handleProfileFormSubmit(evt) {
+const handleProfileFormSubmit = (evt) => {
   evt.preventDefault();
 
   //  Prevent invalid submit by click Enter
@@ -119,7 +119,7 @@ function handleProfileFormSubmit(evt) {
 }
 
 
-function openNewCardPopup() {
+const openNewCardPopup = () => {
   popupNewCardForm.reset();
 
   refreshForm(popupNewCardForm, validationOptions);
@@ -127,7 +127,7 @@ function openNewCardPopup() {
   showPopup(popupTypeNewCard);
 }
 
-function handleNewCardFormSubmit(evt) {
+const handleNewCardFormSubmit = (evt) => {
   evt.preventDefault();
 
   if ( hasInvalidInput(Array.from(evt.target.elements)) ) return;
