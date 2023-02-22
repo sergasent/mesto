@@ -74,13 +74,13 @@ const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
   }
 };
 
-const validateForm = (formElement, {inputSelector, inputErrorClass, errorClass, inactiveButtonClass, submitButtonSelector, ...args}) => {
+const refreshForm = (formElement, {inputSelector, inputErrorClass, errorClass, inactiveButtonClass, submitButtonSelector, ...args}) => {
   const inputList = Array.from(formElement.querySelectorAll(inputSelector));
   const buttonElement = formElement.querySelector(submitButtonSelector);
 
   toggleButtonState(inputList, buttonElement, inactiveButtonClass);
   inputList.forEach(inputElement => {
-    validateInput(formElement, inputElement, {inputErrorClass, errorClass});
+    hideInputError(formElement, inputElement, {inputErrorClass, errorClass});
   });
 };
 
@@ -163,7 +163,7 @@ function openProfilePopup() {
   popupProfileName.value = profileName.textContent;
   popupProfileDescription.value = profileDescription.textContent;
 
-  validateForm(popupProfileForm, validationOptions);
+  refreshForm(popupProfileForm, validationOptions);
 
   showPopup(popupTypeProfile);
 }
@@ -181,7 +181,7 @@ function handleProfileFormSubmit(evt) {
 function openNewCardPopup() {
   popupNewCardForm.reset();
 
-  validateForm(popupNewCardForm, validationOptions);
+  refreshForm(popupNewCardForm, validationOptions);
 
   showPopup(popupTypeNewCard);
 }
