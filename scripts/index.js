@@ -123,7 +123,7 @@ fillInitialCards();
 
 enableValidation(validationOptions);
 
-popupsList.forEach(popup => popup.addEventListener('click', handleClosePopup));
+popupsList.forEach(popup => popup.addEventListener('mousedown', handleClosePopup));
 
 
 cardAddButton.addEventListener('click', openNewCardPopup);
